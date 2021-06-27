@@ -1,9 +1,5 @@
 import speech_recognition as sr
-#from gtts import gTTS
-import os
 import time
-from tkinter import *
-
 
 def audio():
     # Record Audio
@@ -14,15 +10,7 @@ def audio():
       audio = r.listen(source)
       data = r.recognize_google(audio)
       print(data)
-      
-    return data
-    
-
-            
-def speak(audiostring):
-    tts=gTTS(text=audiostring,lang="en")
-    tts.save("audio.mp3")
-    os.system("mpg321 audio.mp3")
+    return data   
 
 
 
