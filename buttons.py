@@ -32,12 +32,12 @@ def ClearScreen():
     
 
 def speak():    
-    subprocess.Popen(["nohup","python3", "/home/pi/max7219/ledmatrix2.py"])
+    subprocess.Popen(["nohup","python3", "/home/pi/max7219voicecontrol/ledmatrix2.py"])
     global switch  
     switch = False
 
 def stop():
-    os.system('sudo pkill -f /home/pi/max7219/ledmatrix2.py')
+    os.system('sudo pkill -f /home/pi/max7219voicecontrol/ledmatrix2.py')
     global switch  
     switch = False
 
